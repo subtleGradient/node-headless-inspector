@@ -1,0 +1,17 @@
+{
+  "name":"headless-inspector",
+  "version":"0.1.0",
+  "description":"headless webkit remote inspector client",
+  "author": "Thomas Aylott <thomas@subtlegradient.com> (http://subtlegradient.com/)",
+  "keywords": [ "websocket", "webkit", "inspector", "debug" ],
+  "repository": { "type": "git", "url": "https://github.com/subtleGradient/node-headless-inspector.git" },
+  "bugs": "https://github.com/subtleGradient/node-headless-inspector/issues",
+  "dependencies":{
+    "ws":"~0.4",
+    "async":"~0.1"
+  },
+  "devDependencies":{
+  },
+  "license":"MIT",
+  "copyright":"Copyright © 2012 Facebook"
+}
