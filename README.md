@@ -1,4 +1,4 @@
-![Headless Inspector](headless-inspector.png)
+![Headless Inspector](https://github.com/subtleGradient/node-headless-inspector/raw/master/headless-inspector.png)
 
 # headless-inspector
 ## Headless Remote WebKit Inspector Client
