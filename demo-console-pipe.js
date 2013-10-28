@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 /*jshint asi:true*/
 
-var async = require('async')
 var createHeadlessInspector = require('./lib/HeadlessInspector').createHeadlessInspector
 
 exports.repl = function(){
