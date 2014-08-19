@@ -2,6 +2,7 @@
 /*jshint asi:true*/
 
 var createHeadlessInspector = require('./lib/HeadlessInspector').createHeadlessInspector
+var launchChrome = require('./lib/launchChrome');
 
 exports.repl = function(){
   
@@ -80,38 +81,6 @@ exports.repl = function(){
       
     })
   })
-  
-  function launchChrome(args, callback){
-    // http://peter.sh/experiments/chromium-command-line-switches/
-    var bin = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
-    args = args.concat(['--no-first-run', '--remote-debugging-port=9222', '--user-data-dir='+process.env.TMPDIR+'/.chrome-user-data'])
-    args.reverse()
-    console.warn()
-    console.warn('bin', bin)
-    console.warn('args', args)
-    var chrome = child_process.execFile(bin, args)
-    chrome.on('exit', function(exitCode){
-      console.log(bin, 'exited with', exitCode)
-      process.exit(exitCode)
-    })
-    process.on('exit', function(){
-      chrome.kill()
-    })
-    // process.on('uncaughtException', function(error){
-    //   chrome.kill()
-    //   console.error('uncaughtException', error)
-    // })
-    setTimeout(function(){
-      http.get(url.parse('http://localhost:9222/json'), function(response){
-        response.on('data', function(data){
-          callback(null, chrome, JSON.parse(''+data))
-        })
-      }).on('error', function(error){
-        chrome.kill()
-        callback(error)
-      })
-    }, 250)
-  }
   
 }
 
