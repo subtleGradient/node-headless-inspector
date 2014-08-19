@@ -234,7 +234,7 @@ InspectorBackendClass.prototype = {
 
     reportProtocolError: function(messageObject)
     {
-        console.error("Request with id = " + messageObject.id + " failed. " + messageObject.error);
+        console.error("Request with id = " + messageObject.id + " failed. ", messageObject.error);
     },
 
     /**
