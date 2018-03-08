@@ -1,3 +1,8 @@
+I haven't maintained this in a while. You should probably use `chrome-remote-interface` instead:  
+https://github.com/cyrus-and/chrome-remote-interface
+
+---
+
 ![Headless Inspector](https://github.com/subtleGradient/node-headless-inspector/raw/master/headless-inspector.png)
 
 # headless-inspector
