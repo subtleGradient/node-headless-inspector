@@ -1,5 +1,5 @@
-I haven't maintained this in a while. You should probably use `chrome-remote-interface` instead:  
-https://github.com/cyrus-and/chrome-remote-interface
+I haven't maintained this in a while. You should probably use one of these things instead:  
+https://github.com/ChromeDevTools/awesome-chrome-devtools
 
 ---
 
